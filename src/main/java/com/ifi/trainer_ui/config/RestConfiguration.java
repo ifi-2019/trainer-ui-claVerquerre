@@ -19,10 +19,14 @@ public class RestConfiguration {
     @Value("${trainer.service.password}")
     private String password;
 
+    @Value("${trainer.service.url}")
+    private String url;
+
     @Bean
     RestTemplate trainerApiRestTemplate(){
         RestTemplate restTemplate = new RestTemplate();
 
+        // TODO ajouter l'url (aussi dans le test)
         BasicAuthenticationInterceptor interceptor = new BasicAuthenticationInterceptor(username, password);
         List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
         interceptors.add(interceptor);
@@ -42,5 +46,9 @@ public class RestConfiguration {
 
     void setPassword(String password) {
         this.password = password;
+    }
+
+    void setUrl (String url) {
+        this.url = url;
     }
 }
