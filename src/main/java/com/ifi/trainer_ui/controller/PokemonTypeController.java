@@ -17,7 +17,7 @@ public class PokemonTypeController {
 
     @GetMapping("/pokedex")
     public ModelAndView pokedex(){
-        List<PokemonType> pokemons = this.pokemonTypeService.listPokemonsTypes();
+        List<PokemonType> pokemons = pokemonTypeService.listPokemonsTypes();
         return new ModelAndView("pokedex", "pokemonTypes", pokemons);
     }
 
