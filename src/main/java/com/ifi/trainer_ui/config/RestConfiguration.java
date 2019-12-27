@@ -26,7 +26,6 @@ public class RestConfiguration {
     RestTemplate trainerApiRestTemplate(){
         RestTemplate restTemplate = new RestTemplate();
 
-        // TODO ajouter l'url (aussi dans le test)
         BasicAuthenticationInterceptor interceptor = new BasicAuthenticationInterceptor(username, password);
         List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
         interceptors.add(interceptor);
