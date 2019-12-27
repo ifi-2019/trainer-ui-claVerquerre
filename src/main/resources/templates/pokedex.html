@@ -21,6 +21,11 @@
                     <span class="badge badge-primary">Attack : {{stats.attack}}</span>
                     <span class="badge badge-primary">Defense : {{stats.defense}}</span>
                     <span class="badge badge-primary">HP : {{stats.hp}}</span>
+                    <ul class="badge badge-primary">
+                        Types : {{#types}}
+                        <li>{{.}}</li>
+                        {{/types}}
+                    </ul>
                 </div>
             </div>
         </div>
